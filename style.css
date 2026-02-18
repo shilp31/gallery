@@ -136,6 +136,26 @@ header p {
     display: none;
 }
 
+/* Animation Classes */
+.gallery-item.animating {
+    animation: fadeInScale 0.3s ease;
+}
+
+.gallery-item.fade-in {
+    animation: fadeInScale 0.3s ease;
+}
+
+@keyframes fadeInScale {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
 /* Footer */
 footer {
     background-color: #333;

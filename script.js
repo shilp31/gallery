@@ -40,35 +40,36 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Function to animate items on filter
     function animateItem(item) {
-        item.style.opacity = '0';
-        item.style.transform = 'scale(0.8)';
-        
+        item.classList.add('animating');
         setTimeout(() => {
-            item.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
-            item.style.opacity = '1';
-            item.style.transform = 'scale(1)';
-        }, 10);
+            item.classList.remove('animating');
+        }, 300);
     }
 
-    // Optional: Add keyboard navigation
-    document.addEventListener('keydown', function(e) {
-        const activeButton = document.querySelector('.category-btn.active');
-        const buttons = Array.from(categoryButtons);
-        const currentIndex = buttons.indexOf(activeButton);
+    // Optional: Add keyboard navigation (only when category nav is focused)
+    categoryButtons.forEach(button => {
+        button.addEventListener('keydown', function(e) {
+            const buttons = Array.from(categoryButtons);
+            const currentIndex = buttons.indexOf(this);
 
-        if (e.key === 'ArrowRight') {
-            const nextIndex = (currentIndex + 1) % buttons.length;
-            buttons[nextIndex].click();
-        } else if (e.key === 'ArrowLeft') {
-            const prevIndex = (currentIndex - 1 + buttons.length) % buttons.length;
-            buttons[prevIndex].click();
-        }
+            if (e.key === 'ArrowRight' || e.key === 'ArrowDown') {
+                e.preventDefault();
+                const nextIndex = (currentIndex + 1) % buttons.length;
+                buttons[nextIndex].focus();
+                buttons[nextIndex].click();
+            } else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
+                e.preventDefault();
+                const prevIndex = (currentIndex - 1 + buttons.length) % buttons.length;
+                buttons[prevIndex].focus();
+                buttons[prevIndex].click();
+            }
+        });
     });
 
     // Initial animation for all items
     galleryItems.forEach((item, index) => {
         setTimeout(() => {
-            animateItem(item);
+            item.classList.add('fade-in');
         }, index * 50);
     });
 });
