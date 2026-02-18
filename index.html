@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Image Gallery</h1>
+        <p>Browse images by category</p>
+    </header>
+
+    <nav class="category-nav">
+        <button class="category-btn active" data-category="all">All</button>
+        <button class="category-btn" data-category="nature">Nature</button>
+        <button class="category-btn" data-category="architecture">Architecture</button>
+        <button class="category-btn" data-category="people">People</button>
+        <button class="category-btn" data-category="animals">Animals</button>
+    </nav>
+
+    <main class="gallery-container">
+        <!-- Nature Images -->
+        <div class="gallery-item" data-category="nature">
+            <img src="https://via.placeholder.com/400x300/4CAF50/ffffff?text=Nature+1" alt="Nature 1">
+            <div class="item-overlay">
+                <h3>Nature Scene 1</h3>
+                <p>Category: Nature</p>
+            </div>
+        </div>
+        <div class="gallery-item" data-category="nature">
+            <img src="https://via.placeholder.com/400x300/8BC34A/ffffff?text=Nature+2" alt="Nature 2">
+            <div class="item-overlay">
+                <h3>Nature Scene 2</h3>
+                <p>Category: Nature</p>
+            </div>
+        </div>
+        <div class="gallery-item" data-category="nature">
+            <img src="https://via.placeholder.com/400x300/009688/ffffff?text=Nature+3" alt="Nature 3">
+            <div class="item-overlay">
+                <h3>Nature Scene 3</h3>
+                <p>Category: Nature</p>
+            </div>
+        </div>
+
+        <!-- Architecture Images -->
+        <div class="gallery-item" data-category="architecture">
+            <img src="https://via.placeholder.com/400x300/607D8B/ffffff?text=Architecture+1" alt="Architecture 1">
+            <div class="item-overlay">
+                <h3>Building 1</h3>
+                <p>Category: Architecture</p>
+            </div>
+        </div>
+        <div class="gallery-item" data-category="architecture">
+            <img src="https://via.placeholder.com/400x300/9E9E9E/ffffff?text=Architecture+2" alt="Architecture 2">
+            <div class="item-overlay">
+                <h3>Building 2</h3>
+                <p>Category: Architecture</p>
+            </div>
+        </div>
+        <div class="gallery-item" data-category="architecture">
+            <img src="https://via.placeholder.com/400x300/546E7A/ffffff?text=Architecture+3" alt="Architecture 3">
+            <div class="item-overlay">
+                <h3>Building 3</h3>
+                <p>Category: Architecture</p>
+            </div>
+        </div>
+
+        <!-- People Images -->
+        <div class="gallery-item" data-category="people">
+            <img src="https://via.placeholder.com/400x300/E91E63/ffffff?text=People+1" alt="People 1">
+            <div class="item-overlay">
+                <h3>Portrait 1</h3>
+                <p>Category: People</p>
+            </div>
+        </div>
+        <div class="gallery-item" data-category="people">
+            <img src="https://via.placeholder.com/400x300/F06292/ffffff?text=People+2" alt="People 2">
+            <div class="item-overlay">
+                <h3>Portrait 2</h3>
+                <p>Category: People</p>
+            </div>
+        </div>
+        <div class="gallery-item" data-category="people">
+            <img src="https://via.placeholder.com/400x300/C2185B/ffffff?text=People+3" alt="People 3">
+            <div class="item-overlay">
+                <h3>Portrait 3</h3>
+                <p>Category: People</p>
+            </div>
+        </div>
+
+        <!-- Animals Images -->
+        <div class="gallery-item" data-category="animals">
+            <img src="https://via.placeholder.com/400x300/FF9800/ffffff?text=Animals+1" alt="Animals 1">
+            <div class="item-overlay">
+                <h3>Animal 1</h3>
+                <p>Category: Animals</p>
+            </div>
+        </div>
+        <div class="gallery-item" data-category="animals">
+            <img src="https://via.placeholder.com/400x300/FFA726/ffffff?text=Animals+2" alt="Animals 2">
+            <div class="item-overlay">
+                <h3>Animal 2</h3>
+                <p>Category: Animals</p>
+            </div>
+        </div>
+        <div class="gallery-item" data-category="animals">
+            <img src="https://via.placeholder.com/400x300/FB8C00/ffffff?text=Animals+3" alt="Animals 3">
+            <div class="item-overlay">
+                <h3>Animal 3</h3>
+                <p>Category: Animals</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Image Gallery. A simple static gallery for GitHub Pages.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
